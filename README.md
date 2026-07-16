@@ -2,7 +2,7 @@
 
 A React frontend for the Job Tracker application. Track your job applications with a clean dashboard interface.
 
-**Live Demo:** (add URL when deployed)  
+**Live Demo:** [(add URL when deployed)](https://youtu.be/mZh4GmL-0k4)  
 **Backend Repo:** https://github.com/anaghakalyanaraman/job-tracker-api
 
 ---
