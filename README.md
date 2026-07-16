@@ -1,16 +1,58 @@
-# React + Vite
+# Job Tracker UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React frontend for the Job Tracker application. Track your job applications with a clean dashboard interface.
 
-Currently, two official plugins are available:
+**Live Demo:** (add URL when deployed)  
+**Backend Repo:** https://github.com/anaghakalyanaraman/job-tracker-api
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React, Vite
+- **Styling:** Tailwind CSS
+- **HTTP Client:** Axios
+- **Routing:** React Router
+- **Auth:** JWT stored in localStorage
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Features
+
+- Register and login with JWT authentication
+- Dashboard showing all your job applications
+- Add new job applications with company, role, status, notes
+- Color coded status badges (Applied, OA, Interview, Offer, Rejected)
+- Delete job applications
+- Protected routes — redirects to login if not authenticated
+
+---
+
+## Pages
+
+| Page | Route | Description |
+|---|---|---|
+| Login | /login | Email + password login |
+| Register | /register | Create new account |
+| Dashboard | /dashboard | View, add, delete jobs |
+
+---
+
+## Running Locally
+
+```bash
+git clone https://github.com/anaghakalyanaraman/job-tracker-ui
+cd job-tracker-ui
+npm install
+npm run dev
+```
+
+Make sure the backend is running at `http://localhost:8000` first.
+
+App runs at `http://localhost:5173`
+
+---
+
+## Screenshots
+
+(add screenshots here)
