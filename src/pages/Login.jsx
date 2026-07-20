@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
+import API_URL from '../config'
 
 export default function Login() {
   const [email, setEmail] = useState('')
@@ -15,7 +16,7 @@ export default function Login() {
       formData.append('username', email)
       formData.append('password', password)
       
-      const response = await axios.post('https://job-tracker-api-735d.onrender.com/auth/login', formData)
+      const response = await axios.post(`${API_URL}/auth/login`, formData)
       localStorage.setItem('token', response.data.access_token)
       navigate('/dashboard')
     } catch (err) {
