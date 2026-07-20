@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate, Link } from 'react-router-dom'
+import API_URL from '../config'
 
 export default function Register() {
   const [name, setName] = useState('')
@@ -8,7 +9,6 @@ export default function Register() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate()
-  import API_URL from '../config'
 
   async function handleSubmit(e) {
     e.preventDefault()
