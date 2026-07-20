@@ -4,6 +4,8 @@ A React frontend for the Job Tracker application. Track your job applications wi
 
 **Live Demo:** [Job Application Tracker](https://youtu.be/mZh4GmL-0k4)  
 **Backend Repo:** https://github.com/anaghakalyanaraman/job-tracker-api
+Frontend: https://job-tracker-ui-sand.vercel.app
+Backend: https://job-tracker-api-735d.onrender.com/docs
 
 ---
 
