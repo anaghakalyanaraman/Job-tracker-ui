@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import API_URL from '../config'
 
 export default function Dashboard() {
   const [jobs, setJobs] = useState([])
@@ -20,7 +21,7 @@ export default function Dashboard() {
 
   async function fetchJobs() {
     try {
-      const response = await axios.get('http://localhost:8000/jobs', {
+      const response = await axios.get(`${API_URL}/jobs`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setJobs(response.data)
@@ -34,7 +35,7 @@ export default function Dashboard() {
   async function handleAddJob(e) {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:8000/jobs', newJob, {
+      const response = await axios.post(`${API_URL}/jobs`, newJob, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setJobs([...jobs, response.data])
@@ -47,7 +48,7 @@ export default function Dashboard() {
 
   async function handleDelete(jobId) {
     try {
-      await axios.delete(`http://localhost:8000/jobs/${jobId}`, {
+      await axios.delete(`${API_URL}/jobs/${jobId}`, {
         headers: { Authorization: `Bearer ${token}` }
       })
       setJobs(jobs.filter(job => job.id !== jobId))
