@@ -13,7 +13,7 @@ export default function Register() {
   async function handleSubmit(e) {
     e.preventDefault()
     try {
-      await axios.post('${API_URL}/auth/register', { name, email, password })
+      await axios.post(`${API_URL}/auth/register`, { name, email, password })
       navigate('/login')
     } catch (err) {
       setError(err.response?.data?.detail || 'Registration failed')
