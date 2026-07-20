@@ -8,11 +8,12 @@ export default function Register() {
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate()
+  import API_URL from '../config'
 
   async function handleSubmit(e) {
     e.preventDefault()
     try {
-      await axios.post('http://localhost:8000/auth/register', { name, email, password })
+      await axios.post('${API_URL}/auth/register', { name, email, password })
       navigate('/login')
     } catch (err) {
       setError(err.response?.data?.detail || 'Registration failed')
